@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>斬斷電腦病原體</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="img/new post.png" rel="stylesheet">
+</head>
+<body>
+<!---------------------------------------------------機器人------------------------------------------------------->
+<div id="top"><a href="#"><img src="img/top.png" alt="" width="90"></a></div>
+<div id="ro" class="pointer"><img src="img/ro.png" alt="" width="90"></div>
+<div id="robot">
+  <div id="rotalk">
+    <div class="m1">歡迎來到智能資安局，有任何問題歡迎詢問我或是點選下方關鍵字查看相關資訊呦！</div>
+    <br>
+    <div class="ro-btn"> <a href="#active">
+      <button type="button" class="btn btn-info">活動</button>
+      </a> <a href="#ans">
+      <button type="button" class="btn btn-info">知識</button>
+      </a> <a href="#pie">
+      <button type="button" class="btn btn-info">數據</button>
+      </a> </div>
+  </div>
+  <!-- roask-->
+  <div>
+    <input type="text" id="roask" placeholder="請輸入文字 ..." onkeyDown="keyin(event)">
+  </div>
+</div>
+<!---------------------------------------------------浮動選單------------------------------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto pl-4">
+      <li class="nav-item"> <a class="nav-link" href="#about">關於資安</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#save">知識補給站</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#pie">數據分析</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#active">活動報名</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#ans">知識王挑戰</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#call">聯繫我們</a> </li>
+    </ul>
+      <div class="logo_space"></div>
+    <a class="navbar-brand" href="#"></a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"> <a class="nav-link" href="#ans"><img src="img/story.png" alt="" class="icon-size" title="知識王"></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#pie"><img src="img/chart.png" alt="" class="icon-size" title="數據"></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#about"><img src="img/new post.png" alt="" class="icon-size" title="關於資安"></a></li>
+      <li class="nav-item"> <a class="nav-link" href="#call"><img src="img/chat.png" alt="" class="icon-size" title="聯繫我們"></a> </li>
+    </ul>
+    <form class="form-inline my-lg-0 pr-4">
+      <input class="form-control mr-sm-2" type="search" placeholder="本站熱搜" aria-label="Search" id="sbox" list="list">
+      <a href="#" data-toggle="modal" data-target="#Search"><img src="img/search.png" alt="" width="20"></a>
+    </form>
+    <datalist id="list">
+      <option value="數據分析"></option>
+      <option value="知識補給站"></option>
+      <option value="活動報名"></option>
+    </datalist>
+  </div>
+</nav>
+<!-- 搜尋Modal -->
+<div class="modal fade" id="Search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"> <img src="img/wifi.png" alt="" width="50">
+        <h3 class="modal-title fw" id="Search1"> 尚未連上網際網路</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+      </div>
+      <div class="modal-body fw"> 很抱歉，由於您尚未欄上網際網路，故無法使用搜尋功能！請連上網際網路後再試一次。 </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------橫幅----------------------------------------------------------------------->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> <a href="#about"><img src="img/go down.png" alt="" class="fixed-img"></a>
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active"> <img class="d-block w-100" src="img/page1.png" alt="First slide">
+      <div class="carousel-caption d-none d-md-block text-left">
+        <div class="col-12 animate__animated animate__fadeInRight"> 　　　
+          <h2 class="fw title_font">勒索病毒是什麼？我們又應該如何防範呢？</h2>
+        </div>
+        <div class="col-12 animate__animated animate__fadeInLeft"> 　　　
+          <h3 class="fw">小心留意任何可疑的簡訊及通知你 / 我都有可能成為病毒的溫床</h3>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item"> <img class="d-block w-100" src="img/Ransomware16.jpg" alt="second slide">
+      <div class="carousel-caption d-none d-md-block text-left">
+        <div class="col-12 animate__animated animate__fadeInLeft"> 　　　
+          <h2 class="title_font">網路釣魚是現在最常見的病毒駐進方式</h2>
+        </div>
+        <div class="col-12 animate__animated animate__fadeInRight">
+          <h3 class="fw">瀏覽網頁是現代人都會做的事，要特別小心「網路釣魚」的問題！</h3>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item"> <img class="d-block w-100" src="img/Ransomware8.jpg" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block text-left">
+        <div class="col-12 animate__animated animate__fadeInLeft"> 　　　
+          <h2 class="title_font">各大產業皆遭受到網路病毒的威脅 </h2>
+        </div>
+        <div class="col-12 animate__animated animate__fadeInRight"> 　　　
+          <h3 class="fw">商務上必須使用相關程式完成工作，請小心執行所有程序，以避免病毒入侵</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+<!--
+    </div>
+  </div>
+  <hr>
+</div>
+--> 
+<!-----------------------------------------------------關於資安------------------------------------------------------------------------->
+<section class="page-1 pb-5 pt-5" id="about">
+  <div class="container">
+    <div class="col-12 mb-3 animate__animated animate__fadeInRight wow mb-5">
+      <div class="inshadow"> <span class="shadow_a">關於</span> <span class="shadow_b">資安</span> </div>
+    </div>
+    <div class="flex mx-auto about-items w-55 pb-5">
+      <div class="artical h-100">
+        <h4 class="fw">網路病毒如何出現？</h4>
+        <p>利用知識落差作為漏洞，安插各式各樣的釣魚訊息、甜糖陷阱，轉化成了隨處廣告的超連結，甚至用心理測驗小遊戲的方式來包裝「網路病毒」。</p>
+      </div>
+      <div class="artical h-100">
+        <h4 class="fw">何為摩爾定律？</h4>
+        <p>是指「積體電路上可容納的電晶體數目，約每隔十八個月便增加一倍。」律同時也代表著：處理器的效能每隔十八個月提高一倍，或價格下降。</p>
+      </div>
+      <div class="artical h-100">
+        <h4 class="fw">前言</h4>
+        <p>我們在網路上快速的轉換交友社群、社交平台，漸漸的我們跟不上資訊流竄的速度，也相對造就了網路犯罪的溫床，利用知識落差作為漏洞。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!---------------------------------------------------------知識補給站----------------------------------------------------------------->
+<section class="page-2 py-5" id="save">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 animate__animated animate__fadeInRight wow mb-5">
+        <div class="inshadow"> <span class="shadow_a">知識</span> <span class="shadow_b">補給站</span> </div>
+      </div>
+      <div class="flex card-deck mx-auto w-100 mb-5">
+        <div class="card h-100 asa animate__animated animate__fadeInDown wow" data-wow-delay="0.5s"> <img src="img/Ransomware8.jpg" class="card-img-top1" alt="Card Image Cap">
+          <div class="card-body">
+            <h4 class="card-title text-center fw">養成備份文件的習慣</h4>
+            <p class="card-text text_heig">雖然預防重於治療，但若您的重要檔案都已備份，您至少可以將勒索軟體 Ransomware 的傷 害降至最低。雖然系統被鎖住還是一件不幸的事...</p>
+            <center>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sos">More</button>
+            </center>
+            
+            <!-- 備份Modal -->
+            <div class="modal fade" id="sos">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header cover-img"> <img src="img/Ransomware8.jpg" alt="" width="100%" height="100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="modal-title fw text-center" id="sos01">養成備份文件的習慣</h4>
+                    然預防重於治療，但若您的重要檔案都已備份，您至少可以將勒索軟體 Ransomware 的傷 害降至最低。雖然系統被鎖住還是一件不幸的事，但至少不會是一場災難，因為您還可以復 原重要的檔案。請遵守 3-2-1 備份原則：
+                    <ol>
+                      <li>3 份備份</li>
+                      <li>2 種不同儲存媒體</li>
+                      <li>1 個不同的存放地點</li>
+                    </ol>
+                  </div>
+                  <div class="modal-footer">
+                   <small class="fw">防範知識庫：<span style="color: #FF7E00">#養成備份習慣 #不開啟可疑訊息 #更新相關軟體</span></small>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 asa animate__animated animate__fadeInDown wow" data-wow-delay="1s"> <img src="img/Ransomware5.jpg" class="card-img-top1" alt="Card Image Cap">
+          <div class="card-body">
+            <h4 class="card-title text-center fw">不隨意點開可疑訊息</h4>
+            <p class="card-text">小心不明來源的電子郵件，您可直接向寄件人求證他們是否寄了這樣一封訊息給您，避免點選不明來源電子郵件內的連結這類社交工程技巧經常會...</p>
+            <center>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#no">More</button>
+            </center>
+            
+            <!-- 可疑Modal -->
+            <div class="modal fade" id="no">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header cover-img"> <img src="img/Ransomware5.jpg" alt="" width="100%" height="100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="modal-title text-center fw" id="no01">不隨意點開可疑訊息</h4>
+                    小心不明來源的電子郵件，您可直接向寄件人求證他們是否寄了這樣一封訊息給您。避免點選不明來源電子郵件內的連結這類社交工程技巧經常會導致使用者下載到勒索軟體 Ransomware。此外，還要小心那些要求您輸入圖片中文字的網站，因為它們可能暗藏勒索程式攻擊。若要確認其真實性，您可利用趨勢科技網站安全檢測中心。 </div>
+                  <div class="modal-footer">
+                    <small class="fw">防範知識庫：<span style="color: #FF7E00">#養成備份習慣 #不開啟可疑訊息 #更新相關軟體</span></small>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 asa animate__animated animate__fadeInDown wow" data-wow-delay="1.5s"> <img src="img/Ransomware3.jpg" class="card-img-top1" alt="Card Image Cap">
+          <div class="card-body">
+            <h4 class="card-title text-center fw">定期更新軟體</h4>
+            <p class="card-text">下載的各種防毒程式，要記得隨時更新到最新版本可讓您多一層安全保障以防範網路威脅，因為勒索程式經常利用軟體漏洞來發動攻擊...</p>
+            <center>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#offen">More</button>
+            </center>
+            <!-- 更新Modal -->
+            <div class="modal fade" id="offen">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header cover-img"> <img src="img/Ransomware3.jpg" alt="" width="100%" height="100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="modal-title fw text-center" id="offen01">定期更新軟體</h4>
+                    下載的各種防毒程式，要記得隨時更新到最新版本可讓您多一層安全保障以防範網路威脅，因為勒索程式經常利用軟體漏洞來發動攻擊喔！ </div>
+                  <div class="modal-footer">
+                    <small class="fw">防範知識庫：<span style="color: #FF7E00">#養成備份習慣 #不開啟可疑訊息 #更新相關軟體</span></small>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 my-5">
+        <center>
+          <a href="#ans">
+          <button type="button" class="btn btn-secondary">知識王挑戰趣</button>
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------------------------------------------------資安行為-------------------------------------------------------------------------->
+<div class="col-12" id="page-special">
+  <div class="ooo_text">
+    <div class="ooo text-center">
+      <h4 class="fw danger pt-4">察</h4>
+      <p class="fw font">覺</p>
+    </div>
+    <div class="ooo text-center">
+      <h4 class="fw danger pt-4">檢</h4>
+      <p class="fw font">驗</p>
+    </div>
+    <div class="ooo text-center">
+      <h4 class="fw danger pt-4">執</h4>
+      <p class="fw font">行</p>
+    </div>
+    <div class="ooo text-center">
+      <h4 class="fw danger pt-4">解</h4>
+      <p class="fw font">毒</p>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------數據分析-------------------------------------------------------------------->
+<section class="page-3 py-5" id="pie">
+  <div class="container">
+    <div class="col-12 animate__animateda animate__flipInX wow">
+      <div class="inshadow"> <span class="shadow_a">數據</span> <span class="shadow_b">分析</span> </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-xl-8 col-12">
+        <div class="size mr-auto">
+          <canvas id="myChart"></canvas>
+            <p class="fw text-center mt-4"><span style="color: #FF7E00">勒索病毒</span>偵測數量最多的Top.5產業</p>
+        </div>
+      </div>
+      <div class="col-xl-4 col-12 mt-5 animate__animated animate__fadeIn wow" data-wow-delay="0.5s">
+        <h4 class="fw title_pie text-center"> 勒索病毒在搞鬼！</h4>
+        <p class="items_sty">勒索病毒集團在 2021 年攻擊了一些更有利可圖的目標，造成許多企業營運中斷，全球各地都真實感受到了這些事件的衝擊，根據統計有製造業、政府機關、銀行業、零售業及醫療業，詳細比例請參照左方圖表。</p>
+      </div>
+    </div>
+    <div class="row maring">
+      <div class="col-xl-4 col-12 animate__animated animate__fadeIn wow" data-wow-delay="1s">
+        <h4 class="fw title_pie-1 text-center"> 什麼？！網路釣魚還有細分！</h4>
+        <p class="items_sty">現在有一種最常見的病毒入侵方式，為「網路釣魚」，而其又分為兩種方式「垃圾郵件」與「登入憑證」，根據統計最主要的攻擊對象為是金融業，其次是醫療與教育產業，詳細比例參照右方數據圖。</p>
+      </div>
+      <div class="col-xl-8 col-12">
+        <div class="size ml-auto">
+          <canvas id="myChart2"></canvas>
+            <p class="fw text-center mt-4">各產業偵測<span style="color: #FF7E00">網路釣魚</span>數量分佈比例圖</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------------------------------------------活動報名---------------------------------------------------------------------->
+<section class="page-4 py-5" id="active">
+  <div class="container">
+    <div class="col-12 pl-4 animate__animated animate__fadeInRight wow pb-5 pt-2">
+      <div class="inshadow"><span class="shadow_a">活動</span> <span class="shadow_b">報名</span></div>
+    </div>
+    <div class="flex mx-auto w-85">
+      <div class="card mb-5 animate__animated animate__rotateInUpRight wow" data-wow-delay="0.5s" style="max-width: 1050px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class="box h-100"><img src="img/Ransomware8.jpg" class="card-img h-100 big" alt="..."></div>
+          </div>
+          <div class="col-md-8 body-sty">
+            <div class="card-body">
+              <h3 class="card-title fw pt-3">防範病毒座談</h3>
+              <p class="card-text pt-3">活在科技新穎的世代，人們人手一機，總是有一些有心人士想設法危害其他網路使用者的權益，我們都有可能成為受害者，歡迎參加我們的防範座談。
+              <ul class="fw-5">
+                <li>地點：台北中正紀念堂廣場</li>
+                <li>時間：10/28</li>
+                <li>價格：免費</li>
+              </ul>
+              </p>
+              <a href="#call">
+              <button type="button" class="btn btn-dark far">立即報名</button>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-5 animate__animated animate__rotateInUpLeft wow" data-wow-delay="1s" style="max-width: 1050px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class="box h-100"><img src="img/Ransomware9.jpg" class="card-img h-100 big" alt="..."> </div>
+          </div>
+          <div class="col-md-8 body-sty">
+            <div class="card-body">
+              <h3 class="card-title fw pt-3">解鎖駭客的秘密</h3>
+              <p class="card-text　pt-3">什麼？！駭客在搞鬼！使用網際網路是現代人人都會做的事，而年輕人使用即時通軟體的頻率更是反常！現在有很多「假訊息」透過相關管道出現在網路使用者的螢幕中，我們又該如何防範呢 ?現在就讓我們一銅探索駭客的秘密！
+              <ul class="fw-5">
+                <li>地點：遠東百貨A13廣場</li>
+                <li>時間：11/14</li>
+                <li>價格：100 人/元</li>
+              </ul>
+              </p>
+              <a href="#call">
+              <button type="button" class="btn btn-dark far">立即報名</button>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-5 animate__animated animate__rotateInUpRight wow" data-wow-delay="1.5s" style="max-width: 1050px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class="box h-100"><img src="img/Ransomware5.jpg" class="card-img h-100 big" alt="..."> </div>
+          </div>
+          <div class="col-md-8 body-sty">
+            <div class="card-body">
+              <h3 class="card-title fw pt-3">資安小劇場</h3>
+              <p class="card-text">某天，小美和小旻在網路上查資料，過了一陣子後，有一個可疑的蓋板廣告出現在畫面中，兩個人出於好奇心就將視窗打開來看，訊息顯示，恭喜您成為第100位瀏覽者，可以獲得一台iphone14 Pro...接下來就讓我們一起探索這詭異的事件吧！
+              <ul class="fw-5">
+                <li>地點：宜蘭歌劇院</li>
+                <li>時間：01/20</li>
+                <li>價格：450 人/元</li>
+              </ul>
+              </p>
+              <a href="#call">
+              <button type="button" class="btn btn-dark far">立即報名</button>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!------------------------------------------------------- 知識王------------------------------------------------------------------->
+<section class="page-5 py-5 vfar" id="ans">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 animate__animateda animate__fadeInRight wow pl-5">
+        <div class="inshadow"><span class="shadow_a">知識王</span><span class="shadow_b">挑戰</span></div>
+      </div>
+      <div class="col-12 animate__animateda animate__fadeInRight wow">
+        <h5 class="fw text-center">擊倒駭客，保護你我的網路安全<br>
+          <br>
+          歡迎做個小測驗！看看您在智能資安局學了多少知識吧！</h5>
+      </div>
+      <div class="card-group mt-5 flex w-75 mx-auto">
+        <div class="card aaa h-100 animate__animated animate__slideInRight wow" data-wow-delay="1.7s">
+          <div class="card-body">
+            <h1 class="card-title qa text-center mt-2">Q<span style="font-size: 30px; color: #000000;">uestion</span>1</h1>
+            <h5 class="card-text fw m-4">下列何者不是正確防範網路病毒的行為？</h5>
+            <p class="fw pl-4 line">
+              <label>
+                <input type="radio" name="RadioGroup1" value="選項按鈕" id="RadioGroup1_0">
+                養成備份文件的習慣</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup1" value="選項按鈕" id="RadioGroup1_1">
+                不隨意點開可疑訊息</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup1" value="選項按鈕" id="RadioGroup1_2">
+                定期更新軟體</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup1" value="選項按鈕" id="RadioGroup1_3">
+                在未確定是否為可疑訊息時，就點開來看</label>
+            </p>
+          </div>
+          <div class="card-footer">
+            <form>
+              <textarea type="text" placeholder="隨手作筆記 ..." class="long-1"></textarea>
+              <button type="reset" class="btn btn-sm" data-toggle="modal" data-target="#note2">保留筆記</button>
+            </form>
+            <!-- 筆記Modal -->
+            <div class="modal fade" id="note2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h1 class="modal-title fw" id="note3">筆記已保留</h1>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card aaa h-100 animate__animated animate__fadeIn wow">
+          <div class="card-body">
+            <h1 class="card-title qa text-center mt-2">Q<span class="" style="font-size: 30px; color: #000000;">uestion</span>2</h1>
+            <h5 class="card-text fw m-4">下列何者是網路釣魚正確的分類名稱呢？</h5>
+            <p class="fw pl-4 line">
+              <label>
+                <input type="radio" name="RadioGroup2" value="選項按鈕" id="RadioGroup2_0">
+                垃圾郵件以及登入憑證</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup2" value="選項按鈕" id="RadioGroup2_1">
+                垃圾郵件以及登出憑證</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup2" value="選項按鈕" id="RadioGroup2_2">
+                巨型郵件以及超級憑證</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup2" value="選項按鈕" id="RadioGroup2_3">
+                巨型郵件以及登出憑證</label>
+            </p>
+          </div>
+          <div class="card-footer">
+            <form>
+              <textarea type="text" placeholder="隨手作筆記 ..." class="long-1"></textarea>
+              <button type="reset" class="btn btn-sm" data-toggle="modal" data-target="#note4">保留筆記</button>
+            </form>
+            <!-- 筆記Modal -->
+            <div class="modal fade" id="note4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h1 class="modal-title fw" id="note5">筆記已保留</h1>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card aaa h-100 animate__animated animate__slideInLeft wow" data-wow-delay="0.8s">
+          <div class="card-body">
+            <h1 class="card-title qa text-center mt-2">Q<span class="" style="font-size: 30px; color: #000000;">uestion</span>3</h1>
+            <h5 class="card-text fw m-4">下列何者是勒索病毒集團最主要的攻擊對象(產業)？</h5>
+            <p class="fw pl-4 line">
+              <label>
+                <input type="radio" name="RadioGroup3" value="選項按鈕" id="RadioGroup3_0">
+                畜牧業</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup3" value="選項按鈕" id="RadioGroup3_1">
+                銀行業</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup3" value="選項按鈕" id="RadioGroup3_2">
+                政府機關</label>
+              <br>
+              <label>
+                <input type="radio" name="RadioGroup3" value="選項按鈕" id="RadioGroup3_3">
+                醫療業</label>
+            </p>
+          </div>
+          <div class="card-footer">
+            <form>
+              <textarea type="text" placeholder="隨手作筆記 ..." class="long-1"></textarea>
+              <button type="reset" class="btn btn-sm" data-toggle="modal" data-target="#note6">保留筆記</button>
+            </form>
+            <!-- 筆記Modal -->
+            <div class="modal fade" id="note6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h1 class="modal-title fw" id="note7">筆記已保留</h1>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!------------------------------------------------------------聯繫我們--------------------------------------------------------------->
+<section class="page-6 py-5" id="call">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 my-5 animate__animated animate__fadeInRight wow">
+        <div class="inshadow"> <span class="shadow_a">聯繫</span> <span class="shadow_b">我們</span></div>
+      </div>
+      <form class="mx-auto form_sty">
+        <div class="form-group mt-3">
+          <label for="exampleInputEmail1">姓名</label>
+          <br>
+          <input type="text" class="long" placeholder="輸入您的姓名 ..." id="exampleInputEmail1">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail2">電話</label>
+          <br>
+          <input type="text" class="long" placeholder="輸入您的電話 ..." id="exampleInputEmail2">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail3">電子信箱</label>
+          <br>
+          <input type="text" class="long" placeholder="輸入您的電子信箱 ..." id="exampleInputEmail3">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail4">活動選擇</label>
+          <br>
+          <select class="long">
+            <option value="">請選擇活動</option>
+            <optgroup label="活動項目">
+            <option value="">資訊安全小劇場</option>
+            <option value="">破解駭客的秘密</option>
+            <option value="">防範病毒講習</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail5">意見反饋</label>
+          <br>
+          <textarea type="text" class="long" placeholder="請留言 ..."></textarea>
+        </div>
+        <center>
+          <button type="submit" class="btn btn-primary" onclick="alert('資料已送出，謝謝您的填寫')">送出資料</button>
+          <button type="reset" class="btn btn-primary">重新填寫</button>
+        </center>
+      </form>
+    </div>
+  </div>
+</section>
+<!-------------------------------------------------------------結尾----------------------------------------------------------------->
+<footer class="bgc">
+  <div class="w-75 mx-auto">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h2 class="cool fw-1">防範網路病毒</h2>
+        <br>
+        <p class="mt-5 text_heig">勒索程式是一種專門將您電腦鎖住，讓您無法使用電腦也無法存取檔案以向您勒索贖金的一種惡意程式，您可能被迫必須交出密碼或錢財給不知名的歹徒。</p>
+        <hr>
+        <p class="text_heig">聯絡人 ：林祐辰<br>
+          連絡電話： 09-123-456-78<br>
+          地址： 宜蘭縣宜蘭市延平路251號</p>
+      </div>
+      <div class="col-12 col-md-4">
+        <h4 class="mt-5 mb-3 text-center fw text-white">網站導覽</h4>
+        <div class="wlorg"> <a href="#about" class="fw-3">&#9655;　關於資安</a><br>
+          <a href="#save" class="fw-3">&#9655;　防範小教室</a><br>
+          <a href="#pie" class="fw-3">&#9655;　數據分析</a><br>
+          <a href="#active" class="fw-3">&#9655;　活動報名</a><br>
+          <a href="#ans" class="fw-3">&#9655;　知識補給站</a><br>
+          <a href="#call" class="fw-3">&#9655;　聯繫我們</a> </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <h4 class="fw-3 mt-5 mb-3 text-center">訂閱資訊安全電子報</h4>
+        <a href="http://facebook.com" class="exe mx-4">Facebook</a> <a href="http://instagram.com" class="exe mx-4">Instagram</a> <a href="http://youtube.com" class="exe mx-4">Youtube</a>
+        <hr>
+        <label>謝謝您對智能資安局的厚愛！訂閱電子報，您即可獲取第一手資訊安全的情報！<br>
+        </label>
+        <form>
+          <input type="text" class="long s-sty" placeholder="請輸入您的電子信箱 ...">
+          <center>
+            <button type="reset" class="btn btn-dark my-3" onclick="alert('已訂閱成功，我們將會把最新的資訊安全資訊通通報給您知！')">立即訂閱</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+        
+    <script type="text/javascript" src="js/chart.js"></script> 
+        <script type="text/javascript" src="js/chartjs-plugin-labels.js"></script> 
+        <script>
+            const data = {
+              labels: ['製造業', '政府機關', '銀行業', '醫療業', '零售業', ],
+              datasets: [{
+                label: '勒索病毒攻擊目標比例圖（2020-2021)',
+                data: [7768, 20000, 17500, 12500, 13460],
+                backgroundColor: [
+                  'rgba(255,0,27,0.40)',
+                  'rgba(255,87,0,0.4)',
+                  'rgba(239,210,15,0.4)',
+                  'rgba(0,116,255,0.4)',
+                  'rgba(99,31,224,0.4)',
+                ],
+                borderColor: [
+                  'rgba(255,0,27,1)',
+                  'rgba(255,87,0,1)',
+                  'rgba(239,210,15,1)',
+                  'rgba(0,116,255,1)',
+                  'rgba(99,31,224,1)',
+                ],
+                borderWidth: 4
+              }]
+            };
+            // config 
+            const config = {
+              type: 'pie',
+              data,
+              options: {
+                //        scales: {
+                //          y: {
+                //            beginAtZero: true
+                //          }
+                //        }
+              }
+            };
+            // render init block
+            const myChart = new Chart(
+              document.getElementById('myChart'),
+              config
+            );
+          
+<!---------------------------------------------------表2-------------------------------------------------> 
+        
+            const data2 = {
+              labels: ['金融業', '醫療業', '教育產業', '零售業', '運輸' ],
+              datasets: [{
+                label: '網路釣魚受害產業數量',
+                data: [3448990,3427451 , 3205462,1349633,987031],
+                backgroundColor: [
+                  'rgba(255,0,27,0.40)',
+                  'rgba(255,87,0,0.4)',
+                  'rgba(239,210,15,0.4)',
+                  'rgba(0,116,255,0.4)',
+                  'rgba(99,31,224,0.4)',
+                ],
+                borderColor: [
+                  'rgba(255,0,27,1)',
+                  'rgba(255,87,0,1)',
+                  'rgba(239,210,15,1)',
+                  'rgba(0,116,255,1)',
+                  'rgba(99,31,224,1)',
+                ],
+                borderWidth: 4
+              }]
+            };
+            // config 
+            const config2 = {
+              type: 'line',
+              data:data2,
+              options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+              }
+            };
+            // render init block
+            const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+          </script>
+
+
+<script src="js/jquery-3.4.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script src="../js/index.js"></script> 
+<script>
+    new WOW().init();
+  </script>
+</body>
+</html>
